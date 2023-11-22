@@ -8,29 +8,63 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Hewan"),),
-      body:Row(
+      body:Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Flexible(
-            flex: 1,
-            child: Column(mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image(image: NetworkImage(buatObject()[0].getImg)),
-                Text(buatObject()[0].getJenis, style: TextStyle(fontSize: 20),),
-                Text(buatObject()[0].getJml_kaki, style: TextStyle(fontSize: 20),),
-                Text(buatObject()[0].getType, style: TextStyle(fontSize: 20),),
-              ],
-          )),
-          Flexible(
-            flex: 1,
-            child: Column(mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image(image: NetworkImage(buatObject()[1].getImg)),
-                Text(buatObject()[1].getJenis, style: TextStyle(fontSize: 20),),
-                Text(buatObject()[1].getJml_kaki, style: TextStyle(fontSize: 20),),
-                Text(buatObject()[1].getType, style: TextStyle(fontSize: 20),),
-              ],
-          )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [             
+              Flexible(
+                flex: 1,
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(width: 5)),
+                  child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image(image: NetworkImage(buatObject()[0].getImg)),
+                      Text(buatObject()[0].getJenis, style: TextStyle(fontSize: 20),),
+                      Text(buatObject()[0].getJml_kaki, style: TextStyle(fontSize: 20),),
+                      Text(buatObject()[0].getType, style: TextStyle(fontSize: 20),),
+                    ],
+                              ),
+                )),
+              Flexible(
+                flex: 1,
+                child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(image: NetworkImage(buatObject()[1].getImg)),
+                    Text(buatObject()[1].getJenis, style: TextStyle(fontSize: 20),),
+                    Text(buatObject()[1].getJml_kaki, style: TextStyle(fontSize: 20),),
+                    Text(buatObject()[1].getType, style: TextStyle(fontSize: 20),),
+                  ],
+              )),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [             
+              Flexible(
+                flex: 1,
+                child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(image: NetworkImage(buatObject()[0].getImg)),
+                    Text(buatObject()[0].getJenis, style: TextStyle(fontSize: 20),),
+                    Text(buatObject()[0].getJml_kaki, style: TextStyle(fontSize: 20),),
+                    Text(buatObject()[0].getType, style: TextStyle(fontSize: 20),),
+                  ],
+              )),
+              Flexible(
+                flex: 1,
+                child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(image: NetworkImage(buatObject()[1].getImg)),
+                    Text(buatObject()[1].getJenis, style: TextStyle(fontSize: 20),),
+                    Text(buatObject()[1].getJml_kaki, style: TextStyle(fontSize: 20),),
+                    Text(buatObject()[1].getType, style: TextStyle(fontSize: 20),),
+                  ],
+              )),
+            ],
+          ),
+          
         ],
       ),
     );
